@@ -10,12 +10,20 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Elixia', sans-serif;
+    border: 1px dotted tomato;
 }
 
 html{
     font-size: 62.5%;
     background-color: #CEF7C2;
+    height: 100vh;
+
 }
+
+body{
+    height: 100vh;
+}
+
 
 header{
     background-color: #CBEFB6;
@@ -25,5 +33,30 @@ header{
     color: #FF4A47;
 }
 
+.grid-container{
+  width: 50vw;
+  height: 60vh;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(16, 1fr);
+}
 
+.grid-container > div{
+    background-color: #FF4A47;
+    border: 1px solid #fff;
+}
 
+.wrapper{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;   
+    margin-block: 1.5rem;
+}
+
+button{
+    padding: .5rem 1.5rem;
+    border-radius: .5rem;
+    cursor: pointer;
+}
