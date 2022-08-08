@@ -10,6 +10,10 @@ function createNBlocks(){
     grid_container.style.gridTemplateRows = `repeat(${num},auto)`;
     for(let i = 0; i < (num * num); i++){
         const div  = document.createElement('div');
+        div.addEventListener('mouseover',()=>{
+            div.style.boxShadow = 'inset 0 0 5px 1px rgba(15, 15, 15, 0.5)';
+            div.style.backgroundColor = '#04A777';
+        })
         grid_container.appendChild(div);
     }
 }
@@ -22,3 +26,14 @@ function populate(){
 }
 
 populate();
+
+function trace(){
+    const grid_container = document.querySelector('.grid-container');
+    const divs = grid_container.querySelectorAll('div');
+    divs.forEach(div => div.addEventListener('mouseover',()=>{
+        div.style.boxShadow = 'inset 0 0 5px 1px rgba(15, 15, 15, 0.5)';
+        div.style.backgroundColor = '#04A777';
+    }))
+}
+
+trace();

@@ -44,6 +44,8 @@ header{
 .grid-container > div{
     background-color: #FF4A47;
     border: 1px solid #fff;
+    box-shadow: none;
+    transition: box-shadow 0.25s, background-color 0.25s;
 }
 
 .wrapper{
